@@ -15,6 +15,7 @@ export const SongCards = ({secondSearch}) => {
             <h2>{song.data.name}</h2>
             <a href={song.data.uri} className="title">Go to play song</a>
             <h4>{song.data.artists.items[0].profile.name}</h4>
+            
             <img src={song.data.albumOfTrack.coverArt.sources[0].url}/>
           </div>
         </div>
