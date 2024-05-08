@@ -1,26 +1,27 @@
 import React from 'react'
 import './SongCards.css';
 
-export const SongCards = ({secondSearch}) => {
-  // console.log(secondSearch)
-  // const [artists] = secondSearch;
-  // song.data[artists]
-  // console.log(artists.data.albumOfTrack.coverArt.sources[0].url)
+const SongCards = ({songsData}) => {
+
+  
     return (
-    <div className='container'>
-      {secondSearch.map((song,i) => (
+    <section className='container'>
+      { songsData ? songsData.map((song,i) => (
         
-        <div key={i}>
-          <div className="song">
-            <h2>{song.data.name}</h2>
-            <a href={song.data.uri} className="title">Go to play song</a>
-            <h4>{song.data.artists.items[0].profile.name}</h4>
-            
-            <img src={song.data.albumOfTrack.coverArt.sources[0].url}/>
-          </div>
-        </div>
-      ))}
+        <article key={i} className="song">
+            <img src={song.data.albumOfTrack.coverArt.sources[0].url} className="imgSong"/>
+            <div className='contArtistURI'>
+              <div>
+                <h3 className='titleSong'>{song.data.name}</h3>
+                <h4 className='artistName'>{song.data.artists.items[0].profile.name}</h4>
+              </div>
+              <a href={`https://open.spotify.com/track/${song.data.id}`} className="linkPlay" target="_blank" rel="noopener noreferrer"></a>
+            </div>      
+        </article> 
+      )) : null }
       
-    </div>
+    </section>
   )
-}
+};
+
+export default SongCards;
