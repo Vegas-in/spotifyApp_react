@@ -1,21 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef,  useContext } from 'react';
+import { SongDataContext } from '../../../../context/SongDataContext';
 import "./Search.css";
 
-const Search = ({ setSongsData }) => {
+const Search = () => {
 
   const [search, setSearch] = useState("");
+  const {songsData,setSongsData} = useContext(SongDataContext);
+  const inputRef = useRef();
   
 
-  function handleSearch(e){
-    if(!search){
-      e.preventDefault();
-      alert('You have to type something :)');
-    }else{
-      e.preventDefault();
-      searchSpotify(search);
-      e.target.song.value = "";
+  function handleSearch(){
+      setSearch(inputRef.current.value)
+      console.log(inputRef.current.value)
     }
-  }
+  
 
   const options = {
     method: 'GET',
@@ -25,29 +23,44 @@ const Search = ({ setSongsData }) => {
     }
   };
   
-  async function searchSpotify(search){
-    try {
-      let url = `https://spotify23.p.rapidapi.com/search/?q=${search}&type=tracks&offset=0&limit=25&numberOfTopResults=5`
-      let res = await fetch(url, options);
-      let data = await res.json();
+  
+    useEffect(()=>{
+      if (search) {
+      async function searchSpotify(){
+        try {
+          console.log(search);
+          let url = `https://spotify23.p.rapidapi.com/search/?q=${search}&type=tracks&offset=0&limit=25&numberOfTopResults=5`
+          let res = await fetch(url, options);
+          let data = await res.json();
+          
+          setSongsData(data.tracks.items);
+          //console.log(songsData);
+          //inputRef.current.value = "";
+        } catch (error) {
+          console.log("Error");
+        }
+        
+      }
 
-      setSongsData(data.tracks.items);
-      
-    } catch (error) {
-      console.log(`You have the error: ${e}`);
-    }
-  }
+      searchSpotify();
 
+      }else null
 
+     
+    
+    },[search]);
+  
+  
+ 
 
   
   return (
     <section className="Search">
      <h3>¿Que te apetece escuchar?</h3>
-     <form onSubmit={handleSearch}>
-      <input type="text" name="song" placeholder="Sympathy For The Devil..."  onChange={e => setSearch(e.target.value)} />
-      <button>Search</button>
-     </form>
+     <article >
+      <input type="text" name="song" placeholder="Sympathy For The Devil..."  ref={inputRef}/>
+      <button onClick={handleSearch}>Search</button>
+     </article>
     </section>
     
   )

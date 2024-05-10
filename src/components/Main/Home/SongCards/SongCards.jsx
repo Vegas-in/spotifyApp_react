@@ -1,15 +1,20 @@
-import React from 'react'
+import { useContext } from 'react';
+import { SongDataContext } from '../../../../context/SongDataContext';
+import { Link } from 'react-router-dom';
 import './SongCards.css';
 
-const SongCards = ({songsData}) => {
+const SongCards = () => {
 
-  
+    const songsData = useContext(SongDataContext)
+    console.log(songsData);
     return (
     <section className='container'>
-      { songsData ? songsData.map((song,i) => (
+      { songsData ? songsData.songsData.map((song,i) => (
         
         <article key={i} className="song">
-            <img src={song.data.albumOfTrack.coverArt.sources[0].url} className="imgSong"/>
+            <Link to='/detail'>
+             <img src={song.data.albumOfTrack.coverArt.sources[0].url} className="imgSong"/>
+            </Link>
             <div className='contArtistURI'>
               <div>
                 <h3 className='titleSong'>{song.data.name}</h3>
