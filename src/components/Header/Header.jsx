@@ -7,8 +7,8 @@ const Header = () => {
   return( 
       <header className="header">
         <h1>SpotifyApp</h1>
-        <Nav />
         <Search />
+        <Nav />
       </header>
   );
 };

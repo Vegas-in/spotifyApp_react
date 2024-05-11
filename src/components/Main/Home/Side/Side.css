@@ -3,9 +3,13 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 15%;
-    background-color: rgb(28, 26, 26);
-    border-radius: 32px;
+    max-height: 500px;
+    background-color: rgba(117, 20, 220, 0.175);
+    border-radius: 8px;
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
 }
+
 
 .sideCards{
     margin: 8px;
