@@ -1,9 +1,18 @@
+.contStartH2{
+    max-width: 85%;
+}
+
+.h2Home{
+    color: rgba(117, 20, 220, 0.389);
+    font-size: 80px;
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap:10px;
-    
+    max-width: 85%;
 }
 
 .song{
@@ -56,6 +65,7 @@
 .linkPlay{
     width: 40px;
     height: 40px;
+    margin: 8px;
     background-image: url("../../../../assets/boton-de-reproduccion.png");
     background-repeat: no-repeat;
     background-color: rgb(28, 26, 26);

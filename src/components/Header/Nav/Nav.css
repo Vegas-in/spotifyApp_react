@@ -1,14 +1,11 @@
 ul{
+    margin: 0;
     display: flex;
 }
 
 li{
-    list-style: none;
+    margin-left: 8px;
     font-family: 'Open Sans';
     padding: 16px;
 }
 
-a{
-    color: white;
-    text-decoration: none;
-}
