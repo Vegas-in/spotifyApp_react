@@ -1,13 +1,13 @@
 import React from 'react'
-import Search from "./Search/Search.jsx";
 import SongCard from "./SongCards/SongCards.jsx";
+import Side from './Side/Side.jsx';
 import "./Home.css"
 
 const Home = () => {
 
   return( 
     <section className="home">
-      <Search />
+      <Side/>
       <SongCard />
     </section>
   );

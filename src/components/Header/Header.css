@@ -1,12 +1,16 @@
 .header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #81b71a;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 0px;
+    padding-top: 24px;
+    background-color: #0a0a0a;
 }
 
 h1{
-    color: white;
+    margin: 0px;
+    color: #81b71a;
     font-family: 'Open Sans';
-    font-size: 56px;
+    font-size: 32px;
 }

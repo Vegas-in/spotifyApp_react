@@ -7,25 +7,27 @@ const SongCards = () => {
 
     const songsData = useContext(SongDataContext)
     console.log(songsData);
+
     return (
-    <section className='container'>
-      { songsData ? songsData.songsData.map((song,i) => (
-        
-        <article key={i} className="song">
-            <Link to='/detail'>
-             <img src={song.data.albumOfTrack.coverArt.sources[0].url} className="imgSong"/>
-            </Link>
-            <div className='contArtistURI'>
-              <div>
-                <h3 className='titleSong'>{song.data.name}</h3>
-                <h4 className='artistName'>{song.data.artists.items[0].profile.name}</h4>
-              </div>
-              <a href={`https://open.spotify.com/track/${song.data.id}`} className="linkPlay" target="_blank" rel="noopener noreferrer"></a>
-            </div>      
-        </article> 
-      )) : null }
-      
-    </section>
+
+        <section className='container'>
+          { songsData == [] ? songsData.songsData.map((song,i) => (
+            
+            <article key={i} className="song">
+                <Link to='/detail'>
+                <img src={song.data.albumOfTrack.coverArt.sources[0].url} className="imgSong"/>
+                </Link>
+                <div className='contArtistURI'>
+                  <div>
+                    <h3 className='titleSong'>{song.data.name}</h3>
+                    <h4 className='artistName'>{song.data.artists.items[0].profile.name}</h4>
+                  </div>
+                  <a href={`https://open.spotify.com/track/${song.data.id}`} className="linkPlay" target="_blank" rel="noopener noreferrer"></a>
+                </div>      
+            </article> 
+          )) : <article className='contStartH2'><h2 className='h2Home'>What do you want to listen to now?</h2></article> }
+          
+        </section>
   )
 };
 

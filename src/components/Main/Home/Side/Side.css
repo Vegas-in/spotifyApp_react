@@ -1,0 +1,24 @@
+.contSideCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 15%;
+    background-color: rgb(28, 26, 26);
+    border-radius: 32px;
+}
+
+.sideCards{
+    margin: 8px;
+}
+
+.imgSide{
+    width: 72px;
+    height: 72px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.titleArtistSide{
+    font-size: 16px;
+}
