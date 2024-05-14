@@ -28,6 +28,6 @@ En la Fase 1 de la aplicación, hemos implementado un home que incluye un compon
 En el header, además del buscador, hay dos botones: uno para redireccionar al Home y otro para ir a la vista de registro, que enlaza con el proyecto de back-end en Node y Express para guardar usuarios.
 
 Fase 2 (Próximamente)
-En la Fase 2 de la aplicación, implementaremos un botón "Añadir a Playlist" en las tarjetas de canciones. También implementaremos un sistema de login en la sección de registro.
+En la Fase 2 de la aplicación, implementaremos un botón "Añadir a Playlist" en las tarjetas de canciones. También implementaremos un sistema de login en la sección de registro. Además implementaremos testing y swagger.
 
 ¡Gracias por explorar SpotifyApp! Siéntete libre de contribuir y mejorar este proyecto.
