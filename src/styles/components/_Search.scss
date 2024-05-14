@@ -1,0 +1,18 @@
+@import "../utils/variables.scss";
+
+.inputSearch{
+    width: 300px;
+    margin: 8px;
+    padding: 4px  ;
+    border-radius: 50px;
+    background-color:$greyBack;
+    color: $white;
+}
+
+.buttonSearch{
+    margin: 8px;
+    padding: 4px;
+    border-radius: 50px;
+    background-color: $greenSpoti;
+    color: $white;
+}

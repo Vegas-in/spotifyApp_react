@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import home from "../../../assets/casa.png";
 import login from "../../../assets/usuario.png";
-import "./Nav.css";
 
 const Nav = () => {
 

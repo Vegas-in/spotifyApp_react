@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef,  useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { SongDataContext } from '../../../context/SongDataContext';
 import { SongsSideContext } from '../../../context/SongsSideContext';
-import "./Search.css";
 
 const Search = () => {
 
@@ -12,8 +12,10 @@ const Search = () => {
   
 
   function handleSearch(){
-      setSearch(inputRef.current.value)
-      console.log(inputRef.current.value)
+      setSearch(inputRef.current.value);
+      console.log(inputRef.current.value);
+      inputRef.current.value = '';
+      
     }
   
 
@@ -36,8 +38,6 @@ const Search = () => {
         let data = await res.json();
         console.log(data);
         setSongsDataSide(data.tracks.items);
-        //console.log(songsData);
-        inputRef.current.value = "";
       } catch (error) {
         console.log("Error");
       }
@@ -85,7 +85,9 @@ const Search = () => {
     <section className="Search">
      <article >
       <input type="text" name="song" placeholder="Sympathy For The Devil..."  ref={inputRef} className='inputSearch'/>
+      <Link to={"/home"}>
       <button onClick={handleSearch} className='buttonSearch'>Search</button>
+      </Link>
      </article>
     </section>
     

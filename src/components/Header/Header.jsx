@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "./Nav/Nav.jsx";
 import Search from "./Search/Search.jsx";
-import "./Header.css";
 
 const Header = () => {
   return( 

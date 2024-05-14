@@ -1,7 +1,7 @@
 import React from 'react'
 import SongCard from "./SongCards/SongCards.jsx";
 import Side from './Side/Side.jsx';
-import "./Home.css"
+
 
 const Home = () => {
 
