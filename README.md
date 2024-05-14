@@ -23,11 +23,11 @@ Tecnologías Utilizadas
 - Manejo de Formularios: Implementamos formularios para capturar y procesar datos de entrada del usuario de manera eficiente y segura.
 - Proyecto en GitHub y Utilización de Ramas: Mantenemos el proyecto en GitHub y utilizamos ramas para gestionar y colaborar en el desarrollo de manera estructurada y ordenada.
 
-Fase 1
+#Fase 1
 En la Fase 1 de la aplicación, hemos implementado un home que incluye un componente de sugerencias y un buscador de canciones que realiza llamadas a la API. Las canciones buscadas se muestran con un filtro de ordenación y paginación. Cada tarjeta de canción muestra la imagen, el nombre y el nombre del artista, junto con un botón que enlaza con Spotify para reproducir la canción. Al hacer clic en la imagen de la canción, se redirige a otra vista llamada "Detail" que muestra los detalles de la canción, así como detalles del álbum, como el año de lanzamiento y todas las canciones del álbum.
 En el header, además del buscador, hay dos botones: uno para redireccionar al Home y otro para ir a la vista de registro, que enlaza con el proyecto de back-end en Node y Express para guardar usuarios.
 
-Fase 2 (Próximamente)
+#Fase 2 (Próximamente)
 En la Fase 2 de la aplicación, implementaremos un botón "Añadir a Playlist" en las tarjetas de canciones. También implementaremos un sistema de login en la sección de registro. Además implementaremos testing y swagger.
 
 ¡Gracias por explorar SpotifyApp! Siéntete libre de contribuir y mejorar este proyecto.
