@@ -1,0 +1,13 @@
+@import "../utils/variables.scss";
+
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 24px;
+    background-color: $blackBack;
+}
+
+h3{
+    color: $white;
+}
