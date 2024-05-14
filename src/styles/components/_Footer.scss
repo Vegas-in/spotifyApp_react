@@ -1,0 +1,12 @@
+@import "../utils/variables.scss";
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: $greenSpoti;
+}
+
+p{
+    margin-top: 0px;
+    color: $white;
+}

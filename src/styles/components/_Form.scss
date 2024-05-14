@@ -1,0 +1,43 @@
+.form-container {
+    background-color: $blackBack;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    min-height: 100vh;
+    margin: 0 auto;
+    
+  }
+  
+  .form-container label {
+    color: $greyText;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Open Sans';
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: $greyBack;
+    color: $white;
+    font-family: 'Open Sans';
+  }
+  
+  .form-container button[type="submit"] {
+    background-color: $greenSpoti;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: $greenTrans;
+  }
+  

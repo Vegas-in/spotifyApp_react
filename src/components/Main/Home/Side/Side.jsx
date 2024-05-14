@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import { SongsSideContext } from '../../../../context/SongsSideContext';
-import "./Side.css";
 
 const Side = () => {
 
